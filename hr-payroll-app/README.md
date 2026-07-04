@@ -51,20 +51,4 @@ You will be prompted to enter:
 - ⭐ Performance Rating (1–5)
 
 ## 🧾 Example Run
-========================================
---- Corporate Payroll System ---
-========================================
-Enter Employee Name: rawan
-Enter Department Name: IT 
-Enter Base Salary: 30000
-Enter Performance Rating (1-5): 4
-========================================
- Payroll Statement For: Rawan
-========================================
-Base Salary      :  30,000.00 EGP
-Earned Bonus     :  3,000.00 EGP
-Gross Salary     :  33,000.00 EGP
-Tax Deductions   :  4,950.00 EGP
-----------------------------------------
-NET PAYABLE CASH :  28050.00 EGP
-========================================
+(example_run_hr_payroll_system.png)
