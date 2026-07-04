@@ -41,7 +41,7 @@ logic into independent functions:
 
 ## ▶️ How to Run
 ```bash
-python3 hr_payroll_app.py
+python3 main.py
 ```
 
 You will be prompted to enter:
