@@ -1,3 +1,7 @@
+"""
+Simple Bank Account Management System using Python basics
+Features: Register, Login, Deposit, Withdraw, Transfer, Change Password, and Balance Check
+"""
 #--------------Users Dictionary----------------
 users={}
 
