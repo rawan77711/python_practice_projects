@@ -8,8 +8,8 @@ A simple **Bank Account Management System** built using only Python basics:
 - Loops (`while`)
 - Functions
 - Dictionaries
-
 🚫 No OOP, No Database, No Files, No external libraries.
+
 ---
 
 ## ⚙️ Features
