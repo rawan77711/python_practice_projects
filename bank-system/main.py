@@ -13,18 +13,18 @@ def register():
         print("Empty input is not allowed!")
         return
     if username in users:
-        print("Error: Username already exists.")
+        print("Username already exists!")
         return
     if len(password)<6:
-        print("Invalid Password! Password must be at least 6 characters")
+        print("Invalid Password!\nPassword must be at least 6 characters")
         return
     users[username] = {"password":password, "balance":0}
     print(f"Hello {username},Your Account Created Successfully!")
 
 #-----------------Login-------------------------------
 def login():
-    attempts = 0
-    while attempts < 3:
+    attempts=0
+    while attempts<3:
        username=input("Enter username: ").strip()
        password=input("Enter password: ").strip()
        if username not in users:
@@ -37,8 +37,8 @@ def login():
           print(f"Welcome {username}!\nYour Current Balance: {users[username]['balance']} EGP")
           bank_menu(username)
           return
-       print(f"Login failed. Attempts left: {3 - attempts}")
-    print("Maximum login attempts reached. Returning to main menu...")
+       print(f"Login failed! Attempts left: {3 - attempts}")
+    print("Maximum login attempts reached!\nReturning to main menu...")
     return None
 
 #-------------------Check Balance----------------------
@@ -49,13 +49,13 @@ def checkbalance(username):
 def deposit(username):
      amount=input("Enter an Amount of Money: ").strip()
      amount=int(amount)
-     if amount>0:
+     if amount==0:
+         print("Operation Cancelled!")
+         return
+     elif amount>0:
          users[username]["balance"]+=amount
          print("Successful Operation!")
          print(f"Receipt: Deposited {amount} EGP\nNew Balance: {users[username]['balance']} EGP")
-     elif amount==0:
-         print("Operation Cancelled!")
-         return
      else:
          print("Invalid Input!!! Amount must be greater than zero")
 
@@ -63,13 +63,13 @@ def deposit(username):
 def withdraw(username):
     withdraw=input("Enter an Amount of Money to Withdraw: ").strip()
     withdraw=int(withdraw)
-    if withdraw<0:
-        print("Invalid Input!!! Amount must be greater than zero")
-    elif users[username]["balance"]<withdraw:
-        print("Insufficient Balance!!")
-    elif withdraw==0:
+    if withdraw==0:
         print("Operation Cancelled!")
         return
+    elif withdraw<0:
+        print("Invalid Input!!!\nAmount must be greater than zero")
+    elif users[username]["balance"]<withdraw:
+        print("Insufficient Balance!!")
     else:
         users[username]["balance"]-=withdraw
         print("Successful Operation!")
@@ -89,13 +89,13 @@ def transfer(username):
         return
     amount=input("Enter an Amount of Money to Transfer: ").strip()
     amount=int(amount)
-    if amount<0:
+    if amount==0:
+        print("Operation Cancelled!")
+        return
+    elif amount<0:
         print("Invalid Input!!! Amount must be greater than zero")
     elif users[username]["balance"]<amount:
         print("Insufficient Balance!!")
-    elif amount==0:
-        print("Operation Cancelled!")
-        return
     else:
         users[username]["balance"]-=amount
         users[recipient]["balance"]+=amount
@@ -122,7 +122,6 @@ def bank_menu(username):
         print("========== Bank Menu ========== ")
         print("1. Check Balance \n2. Deposit \n3. Withdraw \n4. Transfer \n5. Change Password \n6. Logout ")
         menu_choice=int(input("Choose an Option: "))
-
         if menu_choice==1: 
            checkbalance(username)
         elif menu_choice==2:
@@ -150,7 +149,7 @@ def main():
         elif choice==2:
             login()
         elif choice==3:
-            print("Thank you for using Python Bank. Goodbye!")
+            print("Thank you for using Python Bank.\nGoodbye!")
             break
         else:
             print("Invalid Choice!!! Try Again")
