@@ -12,7 +12,7 @@ Supports the core matrix operations through a simple interactive menu.
 - 📐 Determinant
 
 ## 📦 Requirements
-- Python 3.7+
+- Python 3
 - NumPy
 
 
