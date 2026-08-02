@@ -77,7 +77,7 @@ def determinant(matrix):
 #-------------------Menu----------------------#
 
 def main():
-    """Main menu for matrix calculator."""
+    """Main menu for matrix calculator"""
     print('''\t\"A\" for Addition
         \"S\" for Subtraction 
         \"M\" for Multiplication
