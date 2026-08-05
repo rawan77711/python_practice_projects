@@ -21,8 +21,8 @@ class ImageEditor:
             img=Image.open(img_path)
             self.img_array=np.array(img)
             return self.img_array
-        except FileNotFoundError:
-            print("Image doesn't Exist! Try Again!")
+        except (FileNotFoundError, OSError):
+            print("Image doesn't Exist on Your Device! Try Again!")
             return None
 
     def display_image(self):
