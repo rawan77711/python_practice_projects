@@ -33,7 +33,7 @@ pip install numpy pillow
 
 ## Usage
 ```bash
-python new_project.py
+python main.py
 ```
 You'll be prompted for an image path, then presented with a menu.
 Each operation updates the image in place and displays the result immediately.
