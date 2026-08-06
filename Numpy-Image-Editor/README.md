@@ -28,7 +28,8 @@ Pillow
 
 Install with:
 ```bash
-pip install numpy pillow
+pip install numpy 
+pip install pillow
 ```
 
 ## Usage
